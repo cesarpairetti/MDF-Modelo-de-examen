@@ -1,0 +1,125 @@
+\begin{itemize}
+ \item {\bf Mecánica de los Fluidos:} Estática, Cinemática y Dinámica
+    \begin{enumerate}
+    
+  \item {\bf Hidrostática}
+	\begin{itemize} 
+	\item Describir el principio general de la hidrostática.
+	\item ¿Qué diferencias existen entre las fuerzas de superficie y de cuerpo? Dar ejemplos de cada una.
+	\item Explicar mediante un ejemplo el equilibrio relativo en los casos de aceleración lineal constante y
+	de rotación a velocidad constante.
+	\end{itemize}
+
+
+      \item La {\bf Ecuación de Bernoulli} se encuentra transcripta en \ref{eq:Bernoulli}.
+	\begin{equation}\label{eq:Bernoulli}
+	\frac{p}{\gamma}+	%%Energía de presión del fluido
+	\frac{v^2}{2g}+	%%Energía cinética
+	z=\mathit{cte} 		%%Energía potencial gravitatoria
+	\end{equation}
+
+	\begin{itemize}
+	\item ¿Bajo qué hipótesis puede utilizarse este modelo matemático?
+	\item ¿Qué representa cada término de la ecuación?
+	\item ¿Qué representa la ecuación?¿Para qué se utiliza? Dar un ejemplo.
+	\item ¿De qué forma se emplea esta ecuación en el cálculo de cañerías?
+	\end{itemize}
+
+      \item Dada la ecuación de {\bf Euler} para el momento lineal (transcripta en \ref{eq:Euler}):
+      \begin{equation}\label{eq:Euler}
+      \rho \frac{D\mathbf{U}}{Dt}=	%%Variación puntual de momento lineal
+      \rho \mathbf{g}		%%Efecto de las fuerzas de cuerpo.
+      - \nabla p 			%%Efecto de las fuerzas de presiones, fuerzas de superficie.
+      \end{equation}
+      \begin{itemize}
+      \item ¿Bajo qué hipótesis puede utilizarse este modelo matemático?
+      \item ¿Qué representa la ecuación?¿Para qué se utiliza?
+      \item ¿Qué representa cada término de la ecuación?
+      \item Nombrar algún ejemplo de resolución simplificada de esta ecuación.
+      \end{itemize}
+
+      Conociendo a su vez la definición de derivada material (\ref{eq:DM}),
+      explicar qué tipos de aceleraciones puede experimentar una partícula
+      que se desplaza en el campo de velocidad $\mathbf{U}$.
+
+      \begin{equation}\label{eq:DM}
+	\frac{Du}{DT}=\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}=
+	\frac{\partial u}{\partial t}+\mathbf{U}_\bullet \left(\nabla u \right)
+      \end{equation}
+
+      \item Dada la ecuación de {\bf Navier-Stokes} para el momento lineal (transcripta en \ref{eq:NS}):
+      \begin{equation}\label{eq:NS}
+      \rho \frac{D\mathbf{U}}{Dt}=	%%Variación puntual de momento lineal
+      \rho \mathbf{g}		%%Efecto de las fuerzas de cuerpo.
+      - \nabla p 			%%Efecto de las fuerzas de presiones, fuerzas de superficie.
+      + \mu \nabla^2 \mathbf{U}	%%Efecto de las fuerzas viscosas, fuerzas de superficie. (de Navier-Stokes)
+      \end{equation}
+      \begin{itemize}
+      \item ¿Bajo qué hipótesis puede utilizarse este modelo matemático?
+      \item ¿Qué representa la ecuación?¿Para qué se utiliza?
+      \item ¿Qué representa cada término de la ecuación?
+      \item Nombrar algún ejemplo de resolución simplificada de esta ecuación.
+      \end{itemize}
+
+      Conociendo a su vez la definición de derivada material (\ref{eq:DM}),
+      explicar qué tipos de aceleraciones puede experimentar una partícula
+      que se desplaza en el campo de velocidad $\mathbf{U}$.
+
+      \begin{equation}\label{eq:DM}
+	\frac{Du}{DT}=\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial x}+v\frac{\partial u}{\partial y}+w\frac{\partial u}{\partial z}=
+	\frac{\partial u}{\partial t}+\mathbf{U}_\bullet \left(\nabla u \right)
+      \end{equation}
+
+      
+      \item {\bf Teoría de capa límite}
+      \begin{itemize}
+      \item Explicar a qué se llama capa límite. Definir la condición de no deslizamiento.
+      \item Describir los distintos tipos de capa límite posibles.
+      \item ¿A qué se llama desprendimiento de capa límite? ¿En qué situación ocurre?
+      \end{itemize}
+
+      
+      
+      \item Las {\bf toberas convergentes-divergentes} son elementos de amplio uso en muchas aplicaciones de Ingeniería. El modelo matemático
+      empleado en su cálculo se desarrolla a partir de la teoría de flujo compresible.
+
+	\begin{itemize}
+	\item Definir el número de Mach y la clasificación de flujos relacionada a este coeficiente adimensional.
+	\item Describir la relación entre las variaciones de presión y velocidad en función del cambio de sección.
+	Analizar cómo depende del número de Mach.
+	\item Describir las posibles evoluciones del flujo en la tobera convergente divergente.
+	¿Qué variable determina el flujo que se desarrolla en la tobera?
+	\end{itemize}
+    \end{enumerate}
+	
+\item {\bf Instalaciones y máquinas hidráulicas:}
+    \begin{enumerate}
+      \item {\bf Flujo en conductos}. Al considerar el flujo de un fluido Newtoniano
+      en conductos cerrados.
+      \begin{itemize}
+      \item ¿Cuáles son las variables de interés en este problema?
+      \item ¿Cuáles son los posibles regímenes de flujo?
+      \item Estimativamente ¿Cuáles son los perfiles de velocidad y corte en cada caso?
+      \item ¿Qué es y de qué manera pueden calcularse la pérdida de carga?
+      \end{itemize}
+
+      \item {\bf Turbinas}
+      \begin{itemize}
+      \item ¿Cuál es la principal función de dichas máquinas hidráulicas?
+      \item Mencione algunos parámetros de diseño.
+      \item ¿Cuáles tipos de turbinas conoce? ¿De qué depende la elección de una u otra?
+      \item ¿Cuáles son las variables de contorno a las que debe ajustarse una turbina?
+      \item ¿Cómo y para qué se regula el caudal que ingresa al rotor?
+      \end{itemize}
+
+      \item {\bf Bombas centrífugas}
+
+      \begin{itemize}
+      \item ¿Cuál es la principal función de dichas máquinas hidráulicas? 
+	\item Explicar qué es la curva característica de la bomba y qué parámetros la afectan.
+	\item ¿Cómo se interpreta el punto de trabajo?
+	\item ¿Cómo se comportan dos bombas en paralelo?¿Y en serie?
+      \end{itemize}
+
+      \end{enumerate}
+  \end{itemize}

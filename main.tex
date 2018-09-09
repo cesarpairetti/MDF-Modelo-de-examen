@@ -1,0 +1,444 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\graphicspath{{./figuras/}}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[top=3cm, bottom=2.5cm, left=2.5cm, right=1cm]{geometry}
+
+
+\title{MDF: Modelo de examen}
+\author{{{\bf César I. Pairetti}}}
+
+\newcommand{\mr}{\mathbb{R}}
+\newcommand{\mn}{\mathbb{N}}
+\newcommand{\mc}{\mathbb{C}}
+\newcommand{\nti}{n \to \infty}
+\newcommand{\mrn}{\mathbb{R}^n}
+\newcommand{\iii}{\int_{-\infty}^{+\infty}}
+
+
+\newcommand{\MDF}
+{
+\begin{center}
+{\large {\bf Ingeniería Mecánica:} Mecánica de los Fluidos}
+\end{center}
+\textit{Apellido, Nombre (Legajo)}: \hskip 8.cm Fecha:
+\vspace{0.2cm}
+}
+
+\textwidth 16.cm
+
+\begin{document}
+\MDF
+
+\noindent \underline{\textbf{Recuperatorio primer parcial}}:
+
+\begin{enumerate}
+%\item ¿Cuál es la definición de un volumen de control?
+\item Escribir en forma vectorial el teorema general de la hidrostática. ¿Bajo qué hipótesis se cumple?
+\item Definir el concepto de capa límite. Definir la condición de no deslizamiento.
+%%Camion cisterna
+%%Tanques solidarios
+\item Dos tanques que contienen dos fluidos diferentes se hallan separados por
+una compuerta cuadrada, abisagrada en "A", como se muestra en la figura (\ref{fig:tanques}).
+Cada uno de los tanques se ve sometido a una presión manométrica distinta en su
+parte superior. ¿Cuál es la fuerza que debería aplicarse sobre la arista "B" para que la misma se mantenga cerrada?
+\begin{center}
+  $\rho_1 = 1200 \frac{kg}{m^3} \qquad P_{1,man} = -15 kPa \qquad H_1 = 10 m $\\
+  $\rho_2 = 800 \frac{kg}{m^3} \qquad P_{2,man} = 60 kPa \qquad H_2 = 4 m$
+\end{center}
+\begin{figure}[h!!!!]
+  \centering
+  \includegraphics[width=0.4\textwidth]{tanques_solidarios.png}
+  \caption{Tanques solidarios}
+  \label{fig:tanques}
+\end{figure} 
+%%Codo Cimbala
+\item Por el codo de la figura (\ref{fig:codo}) circulan $Q=2500 m^3/h$ de agua, con presión de entrada de $P_1 = 150000 Pa $, siendo la pérdida de carga del mismo  de $\Delta h = 1.0m$. Calcular fuerza ejercida por el agua, considerando el codo emplazado en el plano horizontal (peso en el eje y). Los diámetros de la tubería son que $d_1 = 30$cm y $d_2 = 20$cm, $\theta = 45$. 
+      \vspace{0.5cm}
+      \begin{figure}[h!!]
+      \centering
+      \includegraphics[width=0.5\textwidth]{codo_cimbala_gral.png}
+      \caption{Cálculo de fuerza en codo}
+      \label{fig:codo}
+      \end{figure}  
+
+\end{enumerate}
+%\end{document}
+
+\noindent \underline{\textbf{Examen Final de teoría}}:
+
+\begin{enumerate}
+  \item {\bf Hidrostática}
+	\begin{itemize} 
+	\item Describir el principio general de la hidrostática.
+	\item ¿Qué diferencias existen entre las fuerzas de superficie y de cuerpo? Dar ejemplos de cada una.
+	\item Explicar mediante un ejemplo el equilibrio relativo en los casos de aceleración lineal constante y
+	de rotación a velocidad constante.
+	\end{itemize}
+	
+    \item {\bf Flujo en conductos}. Al considerar el flujo de un fluido Newtoniano en conductos cerrados.
+  \begin{itemize}
+  \item ¿Cuáles son las variables de interés en este problema?
+  \item ¿Cuáles son los posibles regímenes de flujo?
+  \item Estimativamente ¿Cuáles son los perfiles de velocidad y corte en cada caso?
+  \item ¿Qué es y de qué manera pueden calcularse la pérdida de carga?
+  \end{itemize}
+
+    \item Las {\bf toberas convergentes-divergentes} son elementos de amplio uso en muchas aplicaciones de Ingeniería. El modelo matemático       empleado en su cálculo se desarrolla a partir de la teoría de flujo compresible.
+    
+	\begin{itemize}
+	\item Definir el número de Mach y la clasificación de flujos relacionada a este coeficiente adimensional.
+	\item Describir la relación entre las variaciones de presión y velocidad en función del cambio de sección.
+	Analizar cómo depende del número de Mach.
+	\item Describir las posibles evoluciones del flujo en la tobera convergente divergente.
+	¿Qué variable determina el flujo que se desarrolla en la tobera?
+	\end{itemize}
+\end{enumerate}
+
+\end{document}
+%%Ejemplo de 2do examen:
+\noindent\underline{\textit{Examen final de práctica}:}
+
+\begin{enumerate}
+\item El camión tanque semi remolque de la figura \ref{fig:remolque} pasa de $0$ a $7.5$ $m/s$, acelerando uniformemente durante $60s$. Se encuentra lleno de combustible ($\gamma=0,8$) \textbf{hasta la mitad} de su altura $A = 6$m. Las dimensiones restantes del contenedor son $B = 4$m y $L = 12$m. Calcular la fuerza que debe soportar la tapa trasera si la cisterna est\'a abierta y se encuentra dividida en \textbf{5 compartimientos}. A su vez, calcular qué aceleración del camión provoca el derrame de combustible.
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{camionCisterna.png}
+    \caption{Esquema del camión cisterna}
+    \label{fig:remolque}
+  \end{figure}
+  
+  %% Codo 90°
+\item Por el codo de la figura (\ref{fig:codo}) circulan $Q=1000 m^3/h$ de agua, con presión manométrica de entrada de $P_1 = 2 kg/cm^2$, siendo la pérdida de carga del mismo  de $\Delta h = 0.50m$. Calcular fuerza ejercida por el agua, considerando el codo emplazado en el plano horizontal. Desprecie el peso del accesorio y del agua. Los diámetros de la tubería son que $d_1=40$cm y $d_2=25$cm
+  \vspace{0.5cm}
+  \begin{figure}[h!!]
+  \centering
+   \includegraphics[width=0.5\textwidth]{codo.pdf}
+  \caption{Cálculo de fuerza en codo}
+  \label{fig:codo}
+  \end{figure}  
+
+\clearpage
+ \item Para el circuito de la figura \ref{fig:circuito} se dispone de una bomba centrífuga con un conjunto de 4 impulsores, tal como se  muestra en la curva correspondiente de la figura \ref{fig:bomba}. Completar los siguientes items:
+ \begin{enumerate}
+  \item Calcular las pérdidas energéticas y trazar las líneas de energía y  gradiente hidráulico.
+  \item Seleccionar, mediante la figura \ref{fig:bomba},
+  el impulsor que se adecue a las demandas del sistema. En caso de ser necesario, agregar los
+  accesorios que permitan alcanzar las condiciones de servicio.
+  \item Calcular el valor máximo de la distancia $L_asp$ (tramo 1-2 del circuito en figura \ref{fig:circuito})  en función del ANPA requerido por la bomba (esquema figura \ref{fig:bomba}).
+  \item Calcular la potencia total consumida por el equipo.
+ \end{enumerate}
+
+ \textbf{Despreciar las pérdidas localizadas.}. Fluido: agua (15 $\textordmasculine$C).
+   
+ Considerar el nivel de la cañería 1 coincidente con el piso (0 metros). Considerar $D_{asp} = D_1$
+
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{|l|c|c|p{2cm}|l|c|c|}
+    \cline{1-3} \cline{5-7}
+    \multicolumn{3}{|c|}{\textit{Datos}} && \multicolumn{3}{|c|}{\textit{Datos}} \\
+    \cline{1-3} \cline{5-7}
+    $\gamma$ & 1000 & $kg/m^3$ && $\nu$ & $10^{-6}$& $m^2/s$ \\
+    \cline{1-3} \cline{5-7} 
+    $p_{atm}$ & 10 & m.c.a. &&  $p_{vap}$ & 0.0176& bar \\ 
+    \cline{1-3} \cline{5-7}
+    $L_{asp}$ & 6 & m && $Z_{asp}$ & -3 & m \\
+    \cline{1-3} \cline{5-7} 
+    $L_1$ & 20 & m && $D_1$ & 0.15 & m \\ 
+    \cline{1-3} \cline{5-7} 
+    $L_2$ & 10 & m && $D_2$ & 0.05 & m \\ 
+    \cline{1-3} \cline{5-7} 
+    $L_3$ & 15 & m && $D_3$ & 0.1 & m \\ 
+    \cline{1-3} \cline{5-7}
+    $Z_A$ & 5 & m && $\mathbf{Q_A}$ & 30 & $m^3/h$ \\ 
+    \cline{1-3} \cline{5-7}
+    $Z_B$ & 10 & m && $\mathbf{Q_B}$ & 60 & $m^3/h$ \\ 
+    \cline{1-3} \cline{5-7}
+    $f$ & 0.022 &  && \multicolumn{2}{c|}{ANPA$_{req}$} & fig \ref{fig:bomba}\\ 
+    \cline{1-3} \cline{5-7} 
+  \end{tabular}  
+  \caption{Datos del problema 3}
+  \label{tab:circuito}
+  \end{table}
+
+\begin{figure}[hb]
+\centering
+\includegraphics[width=1.1\textwidth]{circuitoGeneral.png}
+\caption{Esquema del circuito}
+\label{fig:circuito}
+\end{figure}
+
+
+\begin{figure}[hb]
+\centering
+\includegraphics[width=\textwidth]{bomba.png}
+\includegraphics[width=\textwidth]{ANPA.png}
+\caption{Curvas características de la bomba disponible}
+\label{fig:bomba}
+\end{figure}
+
+\end{enumerate}
+
+
+\end{document}
+\iffalse
+
+\MDF
+
+\noindent\underline{\textit{Primer parcial}:} \textbf{Recuperatorio}
+\begin{enumerate}
+\item Las fuerzas externas pueden actuar sobre un volumen de control de dos maneras, ¿cuáles?
+\item ¿En qué principio físico se basa el balance integral de energía?
+%%Camion cisterna
+\item El camión tanque semi remolque de la figura \ref{fig:remolque} pasa de $0$ a $15$ $m/s$, acelerando uniformemente durante $60s$. Se encuentra lleno de combustible ($\gamma=0,9$) hasta la mitad de su altura $A = 5$m. Las dimensiones restantes del contenedor son $B = 4$m y $L = 12$m. Calcular la fuerza que debe soportar la tapa trasera si la cisterna est\'a abierta y se encuentra dividida en \textbf{5 compartimientos}. A su vez, calcular qué aceleración del camión provoca el derrame de combustible.
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{camionCisterna.png}
+    \caption{Esquema del camión cisterna}
+    \label{fig:remolque}
+  \end{figure}
+  
+  %% Codo 90°
+\item Por el codo de la figura (\ref{fig:codo}) circulan $Q=1500 m^3/h$ de agua, con presión de entrada de \\ $P_1 = 6 kg/cm^2$, siendo la pérdida de carga del mismo  de $\Delta h = 1.0m$. Calcular fuerza ejercida por el agua, considerando el codo emplazado en el plano horizontal. Desprecie el peso del accesorio y del agua. Los diámetros de la tubería son que $d_1=30$cm y $d_2=20$cm
+  \vspace{0.5cm}
+  \begin{figure}[h!!]
+  \centering
+   \includegraphics[width=0.5\textwidth]{codo.pdf}
+  \caption{Cálculo de fuerza en codo}
+  \label{fig:codo}
+  \end{figure}  
+
+\end{enumerate}
+\clearpage
+\fi
+\MDF
+
+\noindent\underline{\textit{Segundo parcial}:} \textbf{Recuperatorio}
+\begin{enumerate}
+\item Se pretende analizar el campo de velocidades para el flujo laminar \textbf{desarrollado} en una cañería cilíndrica \textbf{infinita}, dado en la figura \ref{fig:hagen_poiseuille}. Considerando el problema \textbf{estacionario}:
+\begin{enumerate}
+  \item Defina las hipótesis para aplicar la ecuación de Navier-Stokes (\ref{eq:NSMom_u_cil}).
+  \item Aplique simplificaciones por simetría y defina las condiciones de contorno matemáticamente.
+  \item A partir de los tres apartados anteriores, obtenga la ecuación diferencial simplificada para el campo de velocidades.
+  \item A partir de la solución, exprese el caudal circulante en función de los datos del problema.
+\end{enumerate}
+
+\begin{equation}\label{eq:NSMom_u_cil}
+\begin{aligned}
+\frac{1}{r}\frac{\partial }{\partial r} (r\,u_r)+ \frac{1}{r}\frac{\partial u_\theta}{\partial \theta} + \frac{\partial u_z}{\partial z}
+&= 0 
+\\
+\frac{\partial u_z}{\partial t} + u_r\frac{\partial u_z}{\partial r} + \frac{u_\theta}{r}\frac{\partial u_z}{\partial \theta} + u_z \frac{\partial u_z}{\partial z}
+&= -\frac{1}{\rho}\frac{\partial p}{\partial z}
++ \nu \left(\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 u_z}{\partial \theta^2} + \frac{\partial^2 u}{\partial z^2}\right)
+\end{aligned}
+\end{equation}
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.35\textwidth]{hagen_poiseuille.png}
+\caption{Flujo en un conducto cilíndrico}
+\label{fig:hagen_poiseuille}
+\end{figure}
+%Pitot en auto
+\item La figura \ref{fig:capa_limite} muestra la ubicación de un tubo de pitot en una superficie plana que se desplaza a una velocidad $U = 10$ km/h. Utilizando la solución de capa límite de Blasius, calcular la diferencia de presión que medirá el Pitot. Recuerde que la misma corresponde a la presión dinámica del flujo $p_{din} = \rho u^2/2$. A la distancia $L$, ¿cuál es el espesor de capa límite?
+
+Una solución aproximada a la ecuación de Blasius es el polinomio de cuarto orden dado por la ecuación \ref{eq:PolBlasius}. A continuación se listan los datos del flujo:
+
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.5\textwidth]{capa_limite.png}
+\caption{Pitot en placa plana, midiendo a una altura $h$}
+\label{fig:capa_limite}
+\end{figure}
+
+$$\rho = 1.2 kg/m^3 \qquad \mu =1.75 \times 10^{-05} Pa s \qquad L = 0.1 m \qquad h = 0.001 m$$
+
+\begin{equation}\label{eq:PolBlasius}
+u/U = 0.0016217 \eta^4 - 0.0190921 \eta^3 + 0.0314731 \eta^2 + 0.3146989 \eta + 0.0015430 \qquad \qquad \eta = y \sqrt{\frac{U}{x\nu}}
+%%  -9.2735e-05   1.5884e-03  -8.5280e-03   1.0741e-02  -8.2920e-03   3.3435e-01  -7.2436e-05 %% Mayor orden: 6
+\end{equation}
+
+\clearpage
+
+%%Tobera convergente-divergente, sacado del Cimbala:
+\item Entra aire a una tobera convergente-divergente, como se muestra en la figura \ref{fig:toberaConvDiv}, a $p_0 = 3$ MPa y $T_0 = 600$ K con velocidad despreciable. El flujo es estacionario, unidimensional e isentrópico con $k = 1.4$, $R^*= 287\;J/(K\,kg)$. Para obtener un Mach de salida $Ma_e = 2$, dada una garganta de área $A^* = 40 {cm}^2$, determinar:
+\begin{enumerate}
+\item Las condiciones de flujo en la garganta ($p_g$, $\rho_g$, $T_g$,$v_g$)
+\item El flujo másico que circula por la tobera.
+\item Las condiciones del flujo en el plano de la salida, inclusive el área de la salida de diseño ($p_s$, $\rho_s$, $T_s$,$v_s$).
+\item En qué regiones de la tobera el flujo es sónico y en cuáles supersónico.
+\end{enumerate}
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.6\textwidth]{toberaConvDiv.png}
+%\includegraphics[width=0.6\textwidth]{eqs_comp.png}
+%\includegraphics[width=0.5\textwidth]{mass_flux.png}
+\caption{Tobera convergente divergente}
+\label{fig:toberaConvDiv}
+\end{figure}
+
+\begin{equation*}
+\begin{aligned}
+\frac{A}{A^*} = \frac{1}{\text{Ma}}\left[\left(\frac{2}{k+1}\right) \left(1 + \frac{k-1}{2}\text{Ma}^2\right)\right]^{0.5(k+1)/(k-1)}
+\qquad
+\frac{T}{T_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2\right)^{-1}
+\\
+\frac{p}{p_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2\right)^{-k/(k-1)}
+\qquad
+\frac{\rho}{\rho_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2 \right)^{-1/(k-1)}
+\end{aligned}
+\end{equation*}
+\end{enumerate}
+
+\end{document}
+\clearpage
+\MDF
+
+\noindent\underline{\textit{Segundo parcial}: \textbf{Tema B}}
+\begin{enumerate}
+%% Copiar y pegar ejercicios del archivo correspondiente en la carpeta "ejercicios/"
+%% Flujo Hagen Poiseuille
+\item Se pretende analizar el campo de velocidades para el flujo laminar \textbf{desarrollado} en una cañería cilíndrica \textbf{infinita}, dado en la figura \ref{fig:hagen_poiseuille}. Considerando el problema \textbf{estacionario}:
+\begin{enumerate}
+  \item Defina las hipótesis para aplicar la ecuación de Navier-Stokes (\ref{eq:NSMom_u_cil}).
+  \item Aplique simplificaciones por simetría y defina las condiciones de contorno matemáticamente.
+  \item A partir de los tres apartados anteriores, obtenga la ecuación diferencial simplificada para el campo de velocidades.
+  \item A partir de la solución, exprese el caudal circulante en función de los datos del problema.
+\end{enumerate}
+
+\begin{equation}\label{eq:NSMom_u_cil}
+\begin{aligned}
+\frac{1}{r}\frac{\partial }{\partial r} (r\,u_r)+ \frac{1}{r}\frac{\partial u_\theta}{\partial \theta} + \frac{\partial u_z}{\partial z}
+&= 0 
+\\
+\frac{\partial u_z}{\partial t} + u_r\frac{\partial u_z}{\partial r} + \frac{u_\theta}{r}\frac{\partial u_z}{\partial \theta} + u_z \frac{\partial u_z}{\partial z}
+&= -\frac{1}{\rho}\frac{\partial p}{\partial z}
++ \nu \left(\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 u_z}{\partial \theta^2} + \frac{\partial^2 u}{\partial z^2}\right)
+\end{aligned}
+\end{equation}
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.4\textwidth]{hagen_poiseuille.png}
+\caption{Flujo en un conducto cilíndrico}
+\label{fig:hagen_poiseuille}
+\end{figure}
+%% Pitot en capa límite
+\item La figura \ref{fig:capa_limite} muestra la ubicación de un tubo de pitot en una superficie plana que se desplaza a una velocidad $U = 5$ km/h. Utilizando la solución de capa límite de Blasius, calcular la diferencia de presión que medirá el Pitot. Recuerde que la misma corresponde a la presión dinámica del flujo $p_{din} = \rho u^2/2$. A la distancia $L$, ¿cuál es el espesor de capa límite?
+
+Una solución aproximada a la ecuación de Blasius es el polinomio de cuarto orden dado por la ecuación \ref{eq:PolBlasius}. A continuación se listan los datos del flujo:
+\begin{center}
+$\rho = 1.2 kg/m^3 \qquad \mu =1.75 \times 10^{-05} Pa s\qquad L = 0.1 m \qquad h = 0.001 m$
+\end{center}
+
+\begin{equation}\label{eq:PolBlasius}
+u/U = 0.0016217 \eta^4 - 0.0190921 \eta^3 + 0.0314731 \eta^2 + 0.3146989 \eta + 0.0015430 \qquad \qquad \eta = y \sqrt{\frac{U}{x\nu}}
+%%  -9.2735e-05   1.5884e-03  -8.5280e-03   1.0741e-02  -8.2920e-03   3.3435e-01  -7.2436e-05 %% Mayor orden: 6
+\end{equation}
+
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.4\textwidth]{capa_limite.png}
+\caption{Pitot en placa plana, midiendo a una altura $h$}
+\label{fig:capa_limite}
+\end{figure}
+\clearpage
+\item Entra aire a una tobera convergente-divergente, como se muestra en la figura \ref{fig:toberaConvDiv}, a $p_0 = 2$ MPa y $T_0 = 800$ K con velocidad despreciable. El flujo es estacionario, unidimensional e isentrópico con $k = 1.4$,$R=287\;J/(kg\,K)$. Para obtener un Mach de salida $Ma_e = 3$, dada una garganta de área $A^* = 20 cm^2$, determinar:
+\begin{enumerate}
+\item Las condiciones de flujo en la garganta ($p_g$, $\rho_g$, $T_g$, $v_g$)
+\item El flujo másico que circula por la tobera.
+\item Las condiciones del flujo en el plano de la salida, inclusive el área de la salida de diseño ($A_s$, $p_s$, $\rho_s$, $T_s$, $v_s$).
+\item En qué regiones de la tobera el flujo es sónico y en cuáles supersónico.
+\end{enumerate}
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.5\textwidth]{toberaConvDiv.png}
+\includegraphics[width=0.5\textwidth]{eqs_comp.png}
+\includegraphics[width=0.5\textwidth]{mass_flux.png}
+\caption{Tobera convergente divergente}
+\label{fig:toberaConvDiv}
+\end{figure}
+\end{enumerate}
+
+\end{document}
+\clearpage
+%\begin{Large}
+%Todos los ejercicios
+%\end{Large}
+\input{ejercicios/teoria_MC} \clearpage
+\input{ejercicios/teoria}\clearpage
+\input{ejercicios/primer_parcial}\clearpage
+\input{ejercicios/segundo_parcial}\clearpage
+\input{ejercicios/tercer_parcial}\clearpage
+
+
+\end{document}
+
+%%Ejemplo primer parcial
+\MDF
+\underline{\textit{Primer parcial}: \textbf{Tema A}}
+
+\begin{enumerate}
+      \item ¿Cuál es la definición del concepto ``volumen de control''?
+      \item Escribir en forma vectorial el teorema general de la hidrostática. ¿Bajo qué hipótesis se cumple?
+      \item ¿En qué principio físico se basa el balance integral de energía?
+      \item Dos tanques que contienen dos fluidos diferentes se hallan separados por
+      una compuerta cuadrada, abisagrada en "A", como se muestra en la figura (\ref{fig:tanques}).
+      Cada uno de los tanques se ve sometido a una presión manométrica distinta en su
+      parte superior. ¿Cuál es la fuerza que debería aplicarse sobre la arista "B" para que la misma se mantenga cerrada?
+      \begin{center}
+    $\rho_1 = 1100 \frac{kg}{m^3} \qquad P_{1,man} = -10 kPa \qquad H_1 = 10 m $\\
+    $\rho_2 = 900 \frac{kg}{m^3} \qquad P_{2,man} = 50 kPa \qquad H_2 = 4 m$
+    \end{center}
+      \begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.4\textwidth]{tanques_solidarios.png}
+	\caption{Tanques solidarios}
+	\label{fig:tanques}
+	\end{figure}
+      \item Por el codo de la figura (\ref{fig:codo}) circulan $Q=1000 m^3/h$ de agua, con presión de entrada de $P_1 = 1.5 kg/cm^2$, siendo la pérdida de carga del mismo  de $\Delta h = 1.0m$. Calcular fuerza ejercida por el agua, considerando el codo emplazado en el plano horizontal (peso en el eje y). Los diámetros de la tubería son que $d_1 = 40$cm y $d_2 = 30$cm. 
+      \vspace{0.5cm}
+      \begin{figure}[!ht]
+      \centering
+      \includegraphics[width=0.5\textwidth]{codo_cimbala_gral.png}
+      \caption{Cálculo de fuerza en codo}
+      \label{fig:codo}
+      \end{figure}  
+\end{enumerate}
+\clearpage
+
+\MDF
+
+\underline{\textit{Primer parcial}: \textbf{Tema B}}
+
+\begin{enumerate}
+  \item Las fuerzas externas pueden actuar sobre un volumen de control de dos maneras, ¿cuáles?
+  \item ¿Cuál es la forma integral de la fuerza que una distribución de presiones $p(\vec{r})$ ejerce sobre una superficie $S$?
+  \item ¿En qué situación es nula la variación de masa dentro de un volumen de control?
+  \item El camión tanque semi remolque de la figura \ref{fig:remolque} pasa de $0$ a $20$ $m/s$, acelerando uniformemente durante $40s$. Se encuentra lleno de combustible ($\gamma=0,8$) hasta la mitad de su altura $A = 4$m. Las dimensiones restantes del contenedor son $B = 4$m y $L = 10$m. Calcular la fuerza que debe soportar la tapa trasera si la cisterna est\'a abierta y se encuentra dividida en \textbf{5 compartimientos}. A su vez, calcular qué aceleración del camión provoca el derrame de combustible.
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{camionCisterna.png}
+    \caption{Esquema del camión cisterna}
+    \label{fig:remolque}
+  \end{figure}
+  \item El accesorio cuya geometría se describe en la figura (\ref{fig:codoDeflector}) se desplaza hacia la derecha con una velocidad $\vec{U} = (5,\;0,\;0)$m/s. Calcular la fuerza en el sentido $x$ y la potencia ejercida por el fluido sobre la pieza en función de los siguientes parámetros:
+    \begin{center}
+    $\rho = 1000 \frac{kg}{m^3} \qquad
+    \vec{V}^{abs}_1 = (10,\;0,\;0) \frac{m}{s} \qquad P_{1,man} = 10000 Pa$
+    \vspace{0.25cm}
+    $A_1 = 0.1 m^2 \qquad A_2 = 0.05 m^2$
+    \end{center}
+      \begin{figure}[hb]
+    \centering
+    \includegraphics[width=0.45\textwidth]{codoDeflector.png}
+    \caption{Codo deflector, extraído del capítulo 6 del Cengel Cimbala}
+    \label{fig:codoDeflector}
+    \end{figure}
+  \end{enumerate}
