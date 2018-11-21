@@ -35,8 +35,89 @@
 
 \begin{document}
 \MDF
+\noindent\underline{\textit{Segundo parcial}:} \textbf{Recuperatorio}
 \begin{enumerate}
-\input{aux}
+\item Se pretende analizar el campo de velocidades para el flujo laminar \textbf{desarrollado} en una cañería cilíndrica \textbf{infinita}, dado en la figura \ref{fig:hagen_poiseuille}. Considerando el problema \textbf{estacionario}:
+\begin{enumerate}
+  \item Defina las hipótesis para aplicar la ecuación de Navier-Stokes (\ref{eq:NSMom_u_cil}).
+  \item Aplique simplificaciones por simetría y defina las condiciones de contorno matemáticamente.
+  \item A partir de los tres apartados anteriores, obtenga la ecuación diferencial simplificada para el campo de velocidades.
+  \item A partir de la solución, exprese el caudal circulante en función de los datos del problema.
+\end{enumerate}
+
+\begin{equation}\label{eq:NSMom_u_cil}
+\begin{aligned}
+\frac{1}{r}\frac{\partial }{\partial r} (r\,u_r)+ \frac{1}{r}\frac{\partial u_\theta}{\partial \theta} + \frac{\partial u_z}{\partial z}
+&= 0 
+\\
+\frac{\partial u_z}{\partial t} + u_r\frac{\partial u_z}{\partial r} + \frac{u_\theta}{r}\frac{\partial u_z}{\partial \theta} + u_z \frac{\partial u_z}{\partial z}
+&= -\frac{1}{\rho}\frac{\partial p}{\partial z}
++ \nu \left(\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 u_z}{\partial \theta^2} + \frac{\partial^2 u}{\partial z^2}\right)
+\end{aligned}
+\end{equation}
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.35\textwidth]{hagen_poiseuille.png}
+\caption{Flujo en un conducto cilíndrico}
+\label{fig:hagen_poiseuille}
+\end{figure}
+%Pitot en auto
+\item La figura \ref{fig:capa_limite} muestra la ubicación de un tubo de pitot en una superficie plana que se desplaza a una velocidad $U = 10$ km/h. Utilizando la solución de capa límite de Blasius, calcular la diferencia de presión que medirá el Pitot. Recuerde que la misma corresponde a la presión dinámica del flujo $p_{din} = \rho u^2/2$. A la distancia $L$, ¿cuál es el espesor de capa límite?
+
+Una solución aproximada a la ecuación de Blasius es el polinomio de cuarto orden dado por la ecuación \ref{eq:PolBlasius}. A continuación se listan los datos del flujo:
+
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.5\textwidth]{capa_limite.png}
+\caption{Pitot en placa plana, midiendo a una altura $h$}
+\label{fig:capa_limite}
+\end{figure}
+
+$$\rho = 1.2 kg/m^3 \qquad \mu =1.75 \times 10^{-05} Pa s \qquad L = 0.1 m \qquad h = 0.001 m$$
+
+\begin{equation}\label{eq:PolBlasius}
+u/U = 0.0016217 \eta^4 - 0.0190921 \eta^3 + 0.0314731 \eta^2 + 0.3146989 \eta + 0.0015430 \qquad \qquad \eta = y \sqrt{\frac{U}{x\nu}}
+%%  -9.2735e-05   1.5884e-03  -8.5280e-03   1.0741e-02  -8.2920e-03   3.3435e-01  -7.2436e-05 %% Mayor orden: 6
+\end{equation}
+
+\clearpage
+
+%%Tobera convergente-divergente, sacado del Cimbala:
+\item Entra aire a una tobera convergente-divergente, como se muestra en la figura \ref{fig:toberaConvDiv}, a $p_0 = 3$ MPa y $T_0 = 600$ K con velocidad despreciable. El flujo es estacionario, unidimensional e isentrópico con $k = 1.4$, $R^*= 287\;J/(K\,kg)$. Para obtener un Mach de salida $Ma_e = 2$, dada una garganta de área $A^* = 40 {cm}^2$, determinar:
+\begin{enumerate}
+\item Las condiciones de flujo en la garganta ($p_g$, $\rho_g$, $T_g$,$v_g$)
+\item El flujo másico que circula por la tobera.
+\item Las condiciones del flujo en el plano de la salida, inclusive el área de la salida de diseño ($p_s$, $\rho_s$, $T_s$,$v_s$).
+\item En qué regiones de la tobera el flujo es sónico y en cuáles supersónico.
+\end{enumerate}
+\begin{figure}[h!!]
+\centering
+\includegraphics[width=0.6\textwidth]{toberaConvDiv.png}
+%\includegraphics[width=0.6\textwidth]{eqs_comp.png}
+%\includegraphics[width=0.5\textwidth]{mass_flux.png}
+\caption{Tobera convergente divergente}
+\label{fig:toberaConvDiv}
+\end{figure}
+
+\begin{equation*}
+\begin{aligned}
+\frac{A}{A^*} = \frac{1}{\text{Ma}}\left[\left(\frac{2}{k+1}\right) \left(1 + \frac{k-1}{2}\text{Ma}^2\right)\right]^{0.5(k+1)/(k-1)}
+\qquad
+\frac{T}{T_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2\right)^{-1}
+\\
+\frac{p}{p_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2\right)^{-k/(k-1)}
+\qquad
+\frac{\rho}{\rho_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2 \right)^{-1/(k-1)}
+\end{aligned}
+\end{equation*}
+\end{enumerate}
+
+\end{document}
+\begin{enumerate}
+\input{Mod1/1}
+\input{Mod2/3}
+\clearpage
+\input{Mod3/1}
 \end{enumerate}
 
 \end{document}
@@ -189,86 +270,6 @@
 \fi
 \MDF
 
-\noindent\underline{\textit{Segundo parcial}:} \textbf{Recuperatorio}
-\begin{enumerate}
-\item Se pretende analizar el campo de velocidades para el flujo laminar \textbf{desarrollado} en una cañería cilíndrica \textbf{infinita}, dado en la figura \ref{fig:hagen_poiseuille}. Considerando el problema \textbf{estacionario}:
-\begin{enumerate}
-  \item Defina las hipótesis para aplicar la ecuación de Navier-Stokes (\ref{eq:NSMom_u_cil}).
-  \item Aplique simplificaciones por simetría y defina las condiciones de contorno matemáticamente.
-  \item A partir de los tres apartados anteriores, obtenga la ecuación diferencial simplificada para el campo de velocidades.
-  \item A partir de la solución, exprese el caudal circulante en función de los datos del problema.
-\end{enumerate}
-
-\begin{equation}\label{eq:NSMom_u_cil}
-\begin{aligned}
-\frac{1}{r}\frac{\partial }{\partial r} (r\,u_r)+ \frac{1}{r}\frac{\partial u_\theta}{\partial \theta} + \frac{\partial u_z}{\partial z}
-&= 0 
-\\
-\frac{\partial u_z}{\partial t} + u_r\frac{\partial u_z}{\partial r} + \frac{u_\theta}{r}\frac{\partial u_z}{\partial \theta} + u_z \frac{\partial u_z}{\partial z}
-&= -\frac{1}{\rho}\frac{\partial p}{\partial z}
-+ \nu \left(\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial u_z}{\partial r}\right) + \frac{1}{r^2}\frac{\partial^2 u_z}{\partial \theta^2} + \frac{\partial^2 u}{\partial z^2}\right)
-\end{aligned}
-\end{equation}
-\begin{figure}[h!!]
-\centering
-\includegraphics[width=0.35\textwidth]{hagen_poiseuille.png}
-\caption{Flujo en un conducto cilíndrico}
-\label{fig:hagen_poiseuille}
-\end{figure}
-%Pitot en auto
-\item La figura \ref{fig:capa_limite} muestra la ubicación de un tubo de pitot en una superficie plana que se desplaza a una velocidad $U = 10$ km/h. Utilizando la solución de capa límite de Blasius, calcular la diferencia de presión que medirá el Pitot. Recuerde que la misma corresponde a la presión dinámica del flujo $p_{din} = \rho u^2/2$. A la distancia $L$, ¿cuál es el espesor de capa límite?
-
-Una solución aproximada a la ecuación de Blasius es el polinomio de cuarto orden dado por la ecuación \ref{eq:PolBlasius}. A continuación se listan los datos del flujo:
-
-\begin{figure}[h!!]
-\centering
-\includegraphics[width=0.5\textwidth]{capa_limite.png}
-\caption{Pitot en placa plana, midiendo a una altura $h$}
-\label{fig:capa_limite}
-\end{figure}
-
-$$\rho = 1.2 kg/m^3 \qquad \mu =1.75 \times 10^{-05} Pa s \qquad L = 0.1 m \qquad h = 0.001 m$$
-
-\begin{equation}\label{eq:PolBlasius}
-u/U = 0.0016217 \eta^4 - 0.0190921 \eta^3 + 0.0314731 \eta^2 + 0.3146989 \eta + 0.0015430 \qquad \qquad \eta = y \sqrt{\frac{U}{x\nu}}
-%%  -9.2735e-05   1.5884e-03  -8.5280e-03   1.0741e-02  -8.2920e-03   3.3435e-01  -7.2436e-05 %% Mayor orden: 6
-\end{equation}
-
-\clearpage
-
-%%Tobera convergente-divergente, sacado del Cimbala:
-\item Entra aire a una tobera convergente-divergente, como se muestra en la figura \ref{fig:toberaConvDiv}, a $p_0 = 3$ MPa y $T_0 = 600$ K con velocidad despreciable. El flujo es estacionario, unidimensional e isentrópico con $k = 1.4$, $R^*= 287\;J/(K\,kg)$. Para obtener un Mach de salida $Ma_e = 2$, dada una garganta de área $A^* = 40 {cm}^2$, determinar:
-\begin{enumerate}
-\item Las condiciones de flujo en la garganta ($p_g$, $\rho_g$, $T_g$,$v_g$)
-\item El flujo másico que circula por la tobera.
-\item Las condiciones del flujo en el plano de la salida, inclusive el área de la salida de diseño ($p_s$, $\rho_s$, $T_s$,$v_s$).
-\item En qué regiones de la tobera el flujo es sónico y en cuáles supersónico.
-\end{enumerate}
-\begin{figure}[h!!]
-\centering
-\includegraphics[width=0.6\textwidth]{toberaConvDiv.png}
-%\includegraphics[width=0.6\textwidth]{eqs_comp.png}
-%\includegraphics[width=0.5\textwidth]{mass_flux.png}
-\caption{Tobera convergente divergente}
-\label{fig:toberaConvDiv}
-\end{figure}
-
-\begin{equation*}
-\begin{aligned}
-\frac{A}{A^*} = \frac{1}{\text{Ma}}\left[\left(\frac{2}{k+1}\right) \left(1 + \frac{k-1}{2}\text{Ma}^2\right)\right]^{0.5(k+1)/(k-1)}
-\qquad
-\frac{T}{T_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2\right)^{-1}
-\\
-\frac{p}{p_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2\right)^{-k/(k-1)}
-\qquad
-\frac{\rho}{\rho_0} = \left(1 + \frac{k-1}{2}\text{Ma}^2 \right)^{-1/(k-1)}
-\end{aligned}
-\end{equation*}
-\end{enumerate}
-
-\end{document}
-\clearpage
-\MDF
 
 \noindent\underline{\textit{Segundo parcial}: \textbf{Tema B}}
 \begin{enumerate}
